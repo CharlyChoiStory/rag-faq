@@ -13,6 +13,7 @@
 7. `07_GITHUB_AND_DEPLOYMENT.md` — GitHub push 및 배포 절차
 8. `08_TROUBLESHOOTING.md` — 지금까지 발생한 오류와 해결법
 9. `09_FILE_INVENTORY.md` — 핵심 파일 역할 목록
+10. `10_SUPABASE_VECTOR_DB.md` — Supabase pgvector 클라우드 Vector DB 전환 가이드
 
 ## 보안 주의
 
