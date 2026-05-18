@@ -177,13 +177,37 @@ st.markdown("""
         margin-top: 6px;
     }
 
-    /* 입력창 커스텀 */
-    .stChatInput {
+    /* 입력창 커스텀 — 터널/모바일에서도 클릭 가능하도록 최상위 레이어 보장 */
+    .stChatInput,
+    [data-testid="stChatInput"],
+    [data-testid="stChatInput"] > div {
         background-color: #f0f2f5 !important;
         border-radius: 24px !important;
+        position: relative !important;
+        z-index: 9999 !important;
+        pointer-events: auto !important;
     }
-    .stChatInput textarea {
-        background-color: #f0f2f5 !important;
+    .stChatInput textarea,
+    [data-testid="stChatInput"] textarea,
+    textarea[aria-label="Chat input"] {
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
+        caret-color: #1a1a1a !important;
+        pointer-events: auto !important;
+        user-select: text !important;
+        -webkit-user-select: text !important;
+        opacity: 1 !important;
+        min-height: 44px !important;
+        font-size: 16px !important;
+    }
+    [data-testid="stChatInput"] button {
+        pointer-events: auto !important;
+        z-index: 10000 !important;
+    }
+    /* 커스텀 말풍선이 입력창 위를 덮지 않도록 안전장치 */
+    .bot-row, .user-row, .bot-bubble, .user-bubble {
+        position: relative;
+        z-index: 1;
     }
 
     /* 사이드바 스타일 */
