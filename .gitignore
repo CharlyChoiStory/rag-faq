@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# 환경 변수 (API 키 보안)
+.env
+
+# 벡터 DB 데이터
+data/chroma_db/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# 로그
+*.log
